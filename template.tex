@@ -48,7 +48,7 @@ The content of LaTeX documents, for example, are surrounded by \texttt{\textback
     \caption{
         The first page of this template when compiled.
     }
-    \label{structures}
+    \label{fig:first-page}
 \end{figure}
 
 Beyond the basic syntax, much of learning LaTeX is learning the different commands and environments that exist.
@@ -56,7 +56,26 @@ For example, text can be made \textbf{bold} with \texttt{\textbackslash textbf},
 Single dollar signs denote inline equations, so \texttt{\$E = mc\textasciicircum 2\$} will be rendered as $E = mc^2$.
 Double dollar signs will render the equation in display mode, which we can see with the quadratic formula:
 $$\frac{{-b \pm \sqrt {b^2 - 4ac} }}{{2a}}$$
-There are also a handful of common environments: \texttt{itemize} for bulletpoint lists, \texttt{enumerate} for numbered lists, \texttt{figure} for figures, \texttt{tabular} for tables, and \texttt{lstlisting} for code listings.
+There are also a handful of common environments:
+
+\begin{itemize}
+    \item \texttt{itemize} for bulletpoint lists
+    \item \texttt{enumerate} for numbered lists
+    \item \texttt{figure} for figures (see Figure \ref{fig:first-page})
+    \item \texttt{tabular} for tables
+    \item \texttt{lstlisting} for code listings (see Listing \ref{lst:python-hello-world})
+\end{itemize}
+
+\begin{lstlisting}[
+    language=Python,
+    caption={Hello, World! in Python},
+    label={lst:python-hello-world},
+    float
+]
+def hello():
+    print('hello, world!')
+\end{lstlisting}
+
 This covers the most frequently used commands, but as you might have already inferred, LaTeX is a vast and deep system, and can easily be overwhelming.
 We recommended following the \citetitle{Overleaf2021LearnLaTeXIn} tutorial \cite{Overleaf2021LearnLaTeXIn}, and examining and playing with the source of this document, to gain working proficiency with LaTeX.
 
@@ -72,33 +91,6 @@ The source of this document is made up of several files, each with its own purpo
 Manual compilation of these files is somewhat esoteric, as it requires multiple uses of the \texttt{pdflatex} and \texttt{biblatex} commands.
 Instead, it is much easier to use tools such as \texttt{latexmk} (in the terminal) or Overleaf (online) for compilation.
 We have also provided a \texttt{Makefile} which will automatically update the document as necessary; the use of makefiles is beyond the scope of this document, but see \textcite{Lambert2021MakefileTutorial}.
-
-\begin{comment}
-
-\begin{figure}[]
-    \begin{center}
-        \includegraphics[width=\linewidth]{figure.pdf}
-    \end{center}
-    \caption{
-        Figure caption.
-        To get a figure to span two columns, use the {\tt figure*} environment rather than {\tt figure}.
-    }
-    \label{figure1}
-\end{figure}
-
-\begin{quote}
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Mauris pellentesque est nec nunc fringilla, a finibus nisl tempor.
-    Sed semper est massa, eget pulvinar neque posuere id.
-    Ut mauris tellus. 
-\end{quote}
-
-\begin{lstlisting}[language=Python]
-def hello():
-    print('hello, world!')
-\end{lstlisting}
-
-\end{comment}
 
 \begin{comment}
 No definition citations, unless the term itself is in dispute
