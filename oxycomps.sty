@@ -18,6 +18,7 @@
 \usepackage{amsfonts} % provides many math symbols/fonts
 \usepackage{amsmath} % provides many math environments
 \usepackage{amssymb} % provides many math symbols/fonts
+\usepackage{enumitem} % allows adjustment of list spacing
 \usepackage{graphicx} % allows insertion of graphics
 \usepackage{hyperref} % creates links within the page and to URLs
 \usepackage{listings} % provides the lstlisting environment
@@ -40,6 +41,9 @@
 \setlength{\parindent}{1em}
 \setlength{\oddsidemargin}{-.304in}
 \setlength{\evensidemargin}{-.304in}
+
+% remove the space between list items
+\setlist{noitemsep}
 
 \def\@maketitle{
    \newpage
