@@ -1,8 +1,8 @@
 % A simple two-column LaTeX style for Occidental College's CS senior projects.
 % Based on latex8.sty by Paolo.Ienne@di.epfl.ch 
 
-% define bold 11pt Times font for second-order headings
 \usepackage{times} % use Times as the default font
+% define bold 11pt Times font for second-order headings
 \font\elvbf = ptmb scaled 1100
 
 \usepackage[style=numeric,sorting=nyt]{biblatex} % format the bibliography nicely
@@ -25,12 +25,6 @@
 \usepackage{url} % formats URLs properly
 \usepackage{verbatim} % provides the comment environment
 
-\lstset{
-    basicstyle=\ttfamily\footnotesize,
-    breaklines=true,
-    showstringspaces=false
-}
-
 % set dimensions of columns, gap between columns, and paragraph indent
 \setlength{\textheight}{8.875in}
 \setlength{\textwidth}{6.875in}
@@ -44,6 +38,13 @@
 
 % remove the space between list items
 \setlist{noitemsep}
+
+% style code listings
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    showstringspaces=false
+}
 
 \def\@maketitle{
    \newpage
