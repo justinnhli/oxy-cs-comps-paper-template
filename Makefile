@@ -1,9 +1,9 @@
 LATEX = latexmk -pdf --shell-escape
 
-default: template.pdf
+default: document.pdf
 
-template.pdf: Makefile *.tex references.bib oxycomps.sty images
-	$(LATEX) template
+document.pdf: Makefile *.tex references.bib oxycomps.sty images
+	$(LATEX) document
 
 images: *.png
 
