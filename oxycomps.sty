@@ -93,13 +93,13 @@
 \long\def\@makecaption#1#2{
    \vspace*{-\baselineskip}
    \setbox\@tempboxa\hbox{\noindent #1.~\normalsize #2}
+   \vspace*{\baselineskip}%
    % IF longer than one paragraph line
    \ifdim \wd\@tempboxa >\hsize
       % THEN set as a paragraph
       #1.~\normalsize #2\par
    \else
       % ELSE center
-      \vspace*{\baselineskip}%
       \hbox to \hsize{\hfil\box\@tempboxa\hfil}
    \fi
 }
