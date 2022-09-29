@@ -20,6 +20,7 @@
 \usepackage{amsfonts} % provides many math symbols/fonts
 \usepackage{amsmath} % provides many math environments
 \usepackage{amssymb} % provides many math symbols/fonts
+\usepackage{caption} % fixes caption spacing issues
 \usepackage{enumitem} % allows adjustment of list spacing
 \usepackage{graphicx} % allows insertion of graphics
 \usepackage{hyperref} % creates links within the page and to URLs
@@ -89,20 +90,6 @@
 \gdef\@email{}
 \def\affiliation#1{\gdef\@affiliation{#1}}
 \gdef\@affiliation{}
-
-\long\def\@makecaption#1#2{
-   \vspace*{-\baselineskip}
-   \setbox\@tempboxa\hbox{\noindent #1.~\normalsize #2}
-   \vspace*{\baselineskip}%
-   % IF longer than one paragraph line
-   \ifdim \wd\@tempboxa >\hsize
-      % THEN set as a paragraph
-      #1.~\normalsize #2\par
-   \else
-      % ELSE center
-      \hbox to \hsize{\hfil\box\@tempboxa\hfil}
-   \fi
-}
 
 % correct heading spacing and type
 \def\section{\@startsection {section}{1}{\z@}
