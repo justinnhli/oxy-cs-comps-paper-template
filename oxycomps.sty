@@ -20,12 +20,16 @@
 \usepackage{amsfonts} % provides many math symbols/fonts
 \usepackage{amsmath} % provides many math environments
 \usepackage{amssymb} % provides many math symbols/fonts
+\usepackage{booktabs}
 \usepackage{caption} % fixes caption spacing issues
-\usepackage[usenames,dvipsnames]{color} % allows for colored text
+\usepackage{colortbl} % allows for colored table cells
+\usepackage{color}
 \usepackage{enumitem} % allows adjustment of list spacing
 \usepackage{graphicx} % allows insertion of graphics
 \usepackage{hyperref} % creates links within the page and to URLs
 \usepackage{listings} % provides the lstlisting environment
+\usepackage{longtable} % for 'longtable' environment
+\usepackage{pdflscape} % for 'landscape' environment
 \usepackage{url} % formats URLs properly
 \usepackage{verbatim} % provides the comment environment
 
@@ -39,6 +43,12 @@
 \setlength{\parindent}{1em}
 \setlength{\oddsidemargin}{-.304in}
 \setlength{\evensidemargin}{-.304in}
+
+% define colors for rubric table
+\definecolor{excellent}{RGB}{102, 189, 99}
+\definecolor{good}{RGB}{217, 239, 139}
+\definecolor{marginal}{RGB}{254, 224, 139}
+\definecolor{unacceptable}{RGB}{244, 109, 67}
 
 % remove the space between list items
 \setlist{noitemsep}
